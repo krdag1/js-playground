@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>입력받은 문자가 대문자로 되어 있으면 '대문자 문장입니다.' 소문자로 되어 있으면 '소문자 문장입니다.' 그 외에는 '보통 문장입니다.' 라고 출력하는 프로그램을 작성해 보세요.
+    </h1>
+    <script>
+        input1 = prompt("문자를 입력하세요.");
+        var outpu1;
+        if ( input1 === input1.toLowerCase()) {
+            output1 = "소문자 문장입니다.";
+        } else if ( input1 === input1.toUpperCase()) {
+            output1 = "대문자 문장입니다.";
+        } else {
+            output1 = "보통 문장입니다.";
+        }
+        document.write(output1);
+    </script>
+</body>
+</html>
