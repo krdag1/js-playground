@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>입력받은 숫자가 홀수인지 짝수인지를 알려주는 프로그램을 작성해 봅시다.</h1>
+    <script>
+        input1 = prompt("홀수 짝수를 판별해 드립니다. 숫자를 입력하세요.");
+        num1 = Number(input1);
+        var output1;
+        if (num1 % 2 == 0) {
+            output1 = "짝수";
+        } else if (num1 % 2 == 1){
+            output1 = "홀수";
+        }
+        document.write("입력한 숫자는 " + output1 + "입니다.");
+    </script>
+</body>
+</html>
