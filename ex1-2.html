@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>BMI를 계산하는 프로그램을 작성해 봅시다.</h1>
+    <script>
+        var input1 = prompt("체중(kg)을 입력하세요.");
+        var input2 = prompt("신장(m)을 입력하세요.");
+        var kg = Number(input1);
+        var m = Number(input2)/100;
+        var bmi = kg / (m * m);
+        console.log(bmi);
+
+        var output;
+        if (bmi < 18.5) {
+            output = "저체중";
+        } else if (bmi>=18.5 && bmi <23){
+            output = "정상체중";
+        } else if (bmi>=23 && bmi < 25){
+            output = "과체중";
+        } else if (bmi>=25 && bmi <30){
+            output = "경도비만";
+        } else if (bmi >= 30){
+            output = "고도비만";
+        };
+
+        document.write("당신의 체질량 지수는 " + output + "입니다.");
+    </script>    
+</body>
+</html>
