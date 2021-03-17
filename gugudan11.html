@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 프로그램</title>
+</head>
+<body>
+    <h1>구구단 전체 출력하기</h1>
+    <script>
+        gugudan = {};
+        gugudan.result = [];
+        gugudan.calculate = function(n) {
+            for (var i = 0; i < 9; i++){
+                this.result[i] = n * (i + 1);
+            }
+            return this.result;
+        }
+
+        gugudan.printf = function(n, y) {
+            document.write("<h2>" + n + "단 </h2>");
+            for (var i = 0; i < 9; i++) {
+                document.write(n + " * " + (i + 1) + " = " + y[i] + "<br>");
+            }
+        }
+
+        function main() {
+            for (var i = 2; i <= 9; i++){
+                var y = gugudan.calculate(i);
+                gugudan.printf(i, y);
+            }
+
+        }
+
+        main();
+    </script>
+</body>
+</html>
