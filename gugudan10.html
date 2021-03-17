@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 프로그램 (함수 사용하기)</title>
+</head>
+<body>
+    <h1>구구단 전체 출력하기(함수 사용하기)</h1>
+    <script>
+        function main() {
+            for (var x = 2; x <= 9; x++){
+                // var x = 2;
+                y = gugudan(x);
+                printOutput(x, y);
+            }
+
+        }
+        
+        function gugudan(n) {
+            var result = [];
+            for (var i = 1; i <= 9; i++){
+                result[i] = n * i;
+            }
+            return result;
+        }
+
+        function printOutput(x1, y1) {
+            document.write("<h2>" + x1 +"단 </h2>");
+            for (var j =1; j <= 9; j++){
+                document.write(x1 + " * " + j + " = " + y1[j] + "<br>");
+            }
+        }
+
+        main();
+    </script>
+</body>
+</html>
