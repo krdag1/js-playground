@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <h1>문자열 계산기 구현하기(입력은 무한으로)</h1>
+    <div id="output">출력위치</div>
+    <script>
+        function main() {
+            console.log("main function is working");
+            
+            var n1 = Number(prompt("첫 번째 수를 입력하세요"));
+            var i = 2;            
+            while ( true ) {
+
+                var op = prompt("연산자( +, - , *, /)를 입력하세요, 멈추려면 'q'를 입력하세요");
+                if ( op === 'q') {
+                    break;
+                }
+                var n2 = Number(prompt( i + "번째 수를 입력하세요 "));
+
+                if ( op === '+' ) {
+                    n1 += n2; 
+                } else if ( op === '-' ) {
+                    n1 -= n2;
+                } else if ( op === '*' ) {
+                    n1 *= n2;
+                } else if ( op === '/' ) {
+                    n1 /= n2;
+                } else {
+                    alert("오류발생: 처음부터 다시 실행하세요");
+                    break;
+                }
+                i++;
+            }
+
+            var str ="계산 결과: " + n1;
+            var out = document.getElementById("output");
+            out.innerHTML = str;
+            
+        }
+
+        main();
+    </script>
+</body>
+</html>
