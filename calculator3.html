@@ -20,17 +20,25 @@
             var op1 = document.getElementById("op").value;
 
             var str ="<h2> 결과 출력 </h2>";
-            if( op1 === '+' ) {
-                str += "number1 + number2 = " + (n1 + n2) + "<br>";
-            } else if ( op1 === '-' ) {
-                str += "number1 - number2 = " + (n1 - n2) + "<br>";
-            } else if ( op1 === '*' ) {
-                str += "number1 * number2 = " + (n1 * n2) + "<br>";
-            } else if ( op1 === '/' ) {
-                str += "number1 / number2 = " + (n1 / n2) + "<br>";
-            } else {
-                str += "연산자는 4식연산자( + , - , * , / )로 만 사용해 주세요";
+            
+            switch( op1 ) {
+                case "+" :
+                    str += "number1 + number2 = " + (n1 + n2) + "<br>";
+                    break;
+                case "-" :
+                    str += "number1 - number2 = " + (n1 - n2) + "<br>";
+                    break;
+                case "*" :
+                    str += "number1 * number2 = " + (n1 * n2) + "<br>";
+                    break;
+                case "/" :
+                    str += "number1 / number2 = " + (n1 / n2) + "<br>";
+                    break;
+                default :
+                    str += "연산자는 4식연산자( + , - , * , / )로 만 사용해 주세요";
+                    break;
             }
+
             var out = document.getElementById("output");
             out.innerHTML = str;
         }
